@@ -1,7 +1,13 @@
-import React from 'react';
+const express = require('express');
+const { default: todosController } = require('../controllers/todosController');
+const router = express.Router();
 
-function todosRoute() {
-  return <div></div>;
-}
+// todo routers
+router.get('/', todosController.listTodos);
+router.post('/', todosController.addTodo);
+router.get('/:id', todosController.gitTodoByID);
+router.put('/:id', todosController.updateTodo);
+router.delete('/:id', todosController.deleteTodo);
 
-export default todosRoute;
+//export routes
+module.export = router;
