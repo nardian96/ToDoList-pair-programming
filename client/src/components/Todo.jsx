@@ -37,39 +37,33 @@ function Todo(props) {
           (console.log(props.list),
           props.list.map((todoItem) => (
             <li className={classes[3]} key={todoItem.id}>
+              <button
+                className={classes[13]}
+                onClick={props.eventListeners[3]}
+                value={todoItem.id}
+              ></button>
+              {() => {
+                if (todoItem.status)
+                  <p className={classes[12]} value={todoItem.id}>
+                    {todoItem.description}
+                  </p>;
+                else
+                  <p className={classes[4]} value={todoItem.id}>
+                    {todoItem.description}
+                  </p>;
+              }}
               <div className={classes[11]}>
-                <button
-                  className={classes[5]}
-                  onClick={props.eventListeners[1]}
-                  value={todoItem.id}
-                >
-                  DELETE
-                </button>
                 <button
                   className={classes[6]}
                   onClick={props.eventListeners[2]}
                   value={todoItem.id}
-                >
-                  MODIFY
-                </button>
+                ></button>
                 <button
-                  className={classes[13]}
-                  onClick={props.eventListeners[3]}
+                  className={classes[5]}
+                  onClick={props.eventListeners[1]}
                   value={todoItem.id}
                 ></button>
               </div>
-              <p
-                className={classes[4]
-                //   (() => {
-                //   if (todoItem.status) {
-                //     classes[12];
-                //   }
-                // })
-              }
-                value={todoItem.id}
-              >
-                {todoItem.description}
-              </p>
             </li>
           )))
         }

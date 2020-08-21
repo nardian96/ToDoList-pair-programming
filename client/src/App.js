@@ -34,7 +34,10 @@ class App extends Component {
   }
   postTodo = (event) => {
     event.preventDefault();
-    axios.post(`${axiosURL}/${event.target.value}`).then(this.grabList);
+    const input = document.querySelector(".todo__form-input");
+    const inputObj = { description: input.value };
+    console.log(input.value);
+    axios.post(axiosURL, inputObj).then(this.grabList);
   };
   deleteTodo = (event) => {
     event.preventDefault();
@@ -44,9 +47,11 @@ class App extends Component {
     event.preventDefault();
     console.log(event.target.value);
     const input = document.querySelector(".todo__form-input");
+    const inputObj = { description: input.value };
+
     console.log(input.value);
     axios
-      .put(`${axiosURL}/?id=${event.target.value}&todo=${input}`)
+      .put(`${axiosURL}/${event.target.value}`, inputObj)
       .then(this.grabList);
   };
 
