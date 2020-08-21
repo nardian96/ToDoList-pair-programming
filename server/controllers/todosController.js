@@ -28,7 +28,7 @@ function deleteTodo(req, res) {
 }
 
 function updateTodo(req, res) {
-  res.json(todos.updateTodo(res.params.id, req.body));
+  res.json(todos.updateTodo(req.params.id, req.body));
 }
 
 module.exports = {
