@@ -189,6 +189,10 @@ body {
   padding: 1rem 0;
 }
 
+.todo__item__item--done {
+  text-decoration: line-through;
+}
+
 .todo__checkbox {
   position: relative;
   top: 1rem;
