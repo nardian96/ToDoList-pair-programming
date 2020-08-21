@@ -35,7 +35,8 @@ body {
 }
 
 body {
-  background-color: #9D7E85;
+  background-image: url(../assets/images/sarah-dorweiler-x2Tmfd1-SgA-unsplash.jpg);
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,7 +49,9 @@ body {
 }
 
 .todo {
+  padding-top: 3rem;
   background-color: #282136;
+  opacity: 80%;
   width: 50rem;
   height: 40rem;
   margin: 8rem 8rem;
@@ -58,9 +61,9 @@ body {
   font-family: 'Monts-Medium';
   padding-bottom: 2rem;
   margin: 0;
-  background-color: #9D7E85;
   color: #F9F3F5;
   text-align: center;
+  opacity: 100%;
 }
 
 .todo__form {
@@ -89,7 +92,7 @@ body {
   height: 2rem;
   background-color: #282136;
   border: none;
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid white;
   color: #F9F3F5;
   font-family: 'Monts-Light';
   outline: none;
@@ -120,27 +123,38 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-left: 0;
+  width: 20rem;
   height: 60%;
-  margin-right: 6rem;
-  margin-top: 3rem;
+  margin: 3rem auto 0;
 }
 
 .todo__list-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem;
+  border-bottom: 0.2px dotted rgba(255, 255, 255, 0.3);
+}
+
+.todo__button-container {
+  width: 6rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .todo__modify-button {
   border: none;
   width: 2rem;
+  height: 100%;
   background-color: #282136;
   background-image: url("../assets/icons/edit.svg");
   background-repeat: no-repeat;
@@ -153,6 +167,7 @@ body {
 .todo__delete-button {
   border: none;
   width: 2rem;
+  height: 100%;
   background-color: #282136;
   background-image: url("../assets/icons/trash.svg");
   background-repeat: no-repeat;
@@ -165,6 +180,5 @@ body {
 .todo__item {
   font-family: 'Monts-Light';
   color: #F9F3F5;
-  padding-left: 2rem;
 }
 /*# sourceMappingURL=styles.css.map */
