@@ -8,9 +8,8 @@ const fs = require("fs");
 const db_file = "./db/todos.json";
 
 const { v4: uuidv4 } = require("uuid");
-function Todo(title, description) {
+function Todo(description) {
   this.id = uuidv4();
-  this.title = title;
   this.description = description;
 }
 
@@ -48,15 +47,15 @@ app.post("/todos/", (req, res) => {
   let data = req.body;
 
   const todosArr = list();
-  const todo = new Todo(data.title, data.description);
+  const todo = new Todo(data.description);
   todosArr.push(todo);
   fs.writeFileSync(db_file, JSON.stringify(todosArr));
   //return todosArr;
 
-  if (!req.body.title || !req.body.description) {
+  if (!req.body.description) {
     res.status(400).json({
       error: "POST body must contain all requiredProperties",
-      requiredProperties: ["title", "description"],
+      requiredProperties: ["description"],
     });
   } else {
     res.json(todo);
@@ -71,7 +70,6 @@ app.put("/todos/:id", (req, res) => {
   const todoIndex = todosArr.findIndex((todo) => todo.id === id);
   todosArr.splice(todoIndex, 1, {
     id: id,
-    title: data.title,
     description: data.description,
   });
   fs.writeFileSync(db_file, JSON.stringify(todosArr));

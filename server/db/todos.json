@@ -1,1 +1,5 @@
-[{"id":"1af0jruup5gu","title":"do project","description":"Complete project for brainstation"},{"id":"1ainjruutd1j","title":"Get Groceries","description":"Go to supermarket"},{"id":"nap","title":"tst new change","description":"tst change"}]
+[
+  { "id": "1af0jruup5gu", "description": "Complete project for brainstation" },
+  { "id": "1ainjruutd1j", "description": "Go to supermarket" },
+  { "id": "nap", "description": "tst change" }
+]
