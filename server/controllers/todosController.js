@@ -1,4 +1,4 @@
-const todos = require('../models/todosModel');
+const todos = require("../models/todosModel");
 
 function listTodos(_req, res) {
   res.json(todos.list());
@@ -16,15 +16,15 @@ function addTodo(req, res) {
     !req.body.date
   ) {
     res.status(400).send({
-      error: 'Post body must contain all requiredProperties',
-      requiredProperties: ['id', 'title', 'descrition', 'date'],
+      error: "Post body must contain all requiredProperties",
+      requiredProperties: ["id", "title", "descrition", "date"],
     });
   }
   res.json(todos.add(req.body));
 }
 
 function deleteTodo(req, res) {
-  res.json(todos.deleteTodo(req.perems.id));
+  res.json(todos.deleteTodo(req.params.id));
 }
 
 function updateTodo(req, res) {
