@@ -1,4 +1,5 @@
 import React from "react";
+import TodoItems from "./TodoItems";
 
 function Todo(props) {
   const classes = [
@@ -42,16 +43,13 @@ function Todo(props) {
                 onClick={props.eventListeners[3]}
                 value={todoItem.id}
               ></button>
-              {() => {
-                if (todoItem.status)
-                  <p className={classes[12]} value={todoItem.id}>
-                    {todoItem.description}
-                  </p>;
-                else
-                  <p className={classes[4]} value={todoItem.id}>
-                    {todoItem.description}
-                  </p>;
-              }}
+              <TodoItems
+                id={todoItem.id}
+                description={todoItem.description}
+                checked={classes[12]}
+                unchecked={classes[4]}
+                status={todoItem.status}
+              />
               <div className={classes[11]}>
                 <button
                   className={classes[6]}

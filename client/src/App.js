@@ -57,9 +57,7 @@ class App extends Component {
 
   checkedItem = (event) => {
     event.preventDefault();
-    axios
-      .put(`${axiosURL}/status/?id=${event.target.value}`)
-      .then(this.grabList);
+    axios.put(`${axiosURL}/status/${event.target.value}`).then(this.grabList);
   };
   eventListeners = [
     this.postTodo,
