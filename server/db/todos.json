@@ -1,8 +1,1 @@
-[
-  { "id": "1ainjruutd1j", "description": "bring homework", "status": false },
-  {
-    "id": "51bbb878-b1ed-40f4-9ca8-ef7dc95c2f03",
-    "description": "bring homework",
-    "status": true
-  }
-]
+[{"id":"9433aa4b-7ab7-406d-a15d-dae8706f3230","description":"Get tomatoes","status":false},{"id":"13853bf7-6d3f-4af5-994f-9484300e0492","description":"Walk the dog","status":false},{"id":"04ac3f17-7350-401b-969d-43b7003811b4","description":"Take out the trash in the afternoon","status":false}]

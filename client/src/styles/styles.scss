@@ -30,7 +30,6 @@ body {
     background-color: $form-color;
     opacity: 80%;
     width: 50rem;
-    height: 40rem;
     margin: 8rem 8rem;
     &__title {
         font-family: 'Monts-Medium';
@@ -89,34 +88,40 @@ body {
         display: flex;
         flex-direction: column;
         padding-left: 0;
-        width: 20rem;
+        padding-bottom: 3rem;
+        min-width: 20rem;
         height: 60%;
-        margin: 3rem auto 0;
+        margin: 3rem auto;
+        align-items: center;
     }
 
     &__list-item {
+        width: 60%;
         position: relative;
         display: flex;
         justify-content: space-between;
         padding: 0.5rem;
+        text-align: left;
         border-bottom: 0.2px dotted rgba(255, 255, 255, 0.3);
     }
 
     &__button-container {
-        width: 6rem;
+        width: 3rem;
         height: 100%;
         display: flex;
         justify-content: flex-end;
+        padding: 1rem 0;
     }
 
     &__modify-button {
         border: none;
-        width: 2rem;
-        height: 100%;
+        width: 1rem;
+        height: 1rem;
+        margin-right: 1rem;
         background-color: $form-color;
         background-image: url('../assets/icons/edit.svg');
         background-repeat: no-repeat;
-        background-size: 50%;
+        background-size: 100%;
         background-position-x: center;
         background-position-y: center;
         outline: none;
@@ -124,12 +129,12 @@ body {
 
     &__delete-button {
         border: none;
-        width: 2rem;
-        height: 100%;
+        width: 1rem;
+        height: 1rem;
         background-color: $form-color;
         background-image: url('../assets/icons/trash.svg');
         background-repeat: no-repeat;
-        background-size: 50%;
+        background-size: 100%;
         background-position-x: center;
         background-position-y: center;
         outline: none;
@@ -139,14 +144,27 @@ body {
         font-family: 'Monts-Light';
         color: $text-color;
         padding: 1rem 0;
-        &__item--done {
+        margin: 0;
+        &--done {
             text-decoration: line-through;
+            color: $text-color;
+            font-style: italic;
+            font-size: 1rem;
+            padding: 1rem 0;
+            margin: 0;
+            
         }
     }
 
-    &__checkbox {
-        position: relative;
-        top: 1rem;
+    &__button-checked {
+        background-color: $form-color;
+        border: none;
+        background-image: url('../assets/icons/tick.svg');
+        background-repeat: no-repeat;
+        width: 1rem;
+        height: 1rem;
+        background-size: 100% ;
+        margin: 1rem 0;
     }
 }
 
