@@ -3,7 +3,7 @@ import axios from "axios";
 import "./Sass/app.css";
 import Todo from "./components/Todo";
 
-const axiosURL = "http://localhost:5000/";
+const axiosURL = "http://localhost:5000/todos";
 class App extends Component {
   state = {
     todo: [],
@@ -12,11 +12,11 @@ class App extends Component {
   testdata = [
     {
       id: "234235rwf",
-      todo: "aklshdlaihiwfalicnli  awlinaliefjalwihfa",
+      description: "aklshdlaihiwfalicnli  awlinaliefjalwihfa",
     },
     {
       id: "234235rasswf",
-      todo: "aklshdlaihiwfalicnli  awlinaliefjalwihfa",
+      description: "aklshdlaihiwfalicnli  awlinaliefjalwihfa",
     },
   ];
 
@@ -50,13 +50,24 @@ class App extends Component {
       .then(this.grabList);
   };
 
-  eventListeners = [this.postTodo, this.deleteTodo, this.modifyTodo];
+  checkedItem = (event) => {
+    event.preventDefault();
+    axios
+      .put(`${axiosURL}/status/?id=${event.target.value}`)
+      .then(this.grabList);
+  };
+  eventListeners = [
+    this.postTodo,
+    this.deleteTodo,
+    this.modifyTodo,
+    this.checkedItem,
+  ];
 
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <Todo list={this.testdata} eventListeners={this.eventListeners} />
+          <Todo list={this.state.todo} eventListeners={this.eventListeners} />
         </header>
       </div>
     );

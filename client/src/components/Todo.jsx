@@ -13,6 +13,9 @@ function Todo(props) {
     "todo__form-label",
     "todo__form-input",
     "todo__form-post-button",
+    "todo__button-container",
+    "todo__item--done",
+    "todo__button-checked",
   ];
   if (props.list === undefined) return <p>loading</p>;
 
@@ -28,32 +31,42 @@ function Todo(props) {
         <button className={classes[10]} onClick={props.eventListeners[0]}>
           ADD
         </button>
-        <p>
-          To modify please enter the new item here and press the modify button
-          on the line you want to change.
-        </p>
       </form>
       <ul className={classes[2]}>
         {
           (console.log(props.list),
           props.list.map((todoItem) => (
             <li className={classes[3]} key={todoItem.id}>
-              <button
-                className={classes[5]}
-                onClick={props.eventListeners[1]}
+              <div className={classes[11]}>
+                <button
+                  className={classes[5]}
+                  onClick={props.eventListeners[1]}
+                  value={todoItem.id}
+                >
+                  DELETE
+                </button>
+                <button
+                  className={classes[6]}
+                  onClick={props.eventListeners[2]}
+                  value={todoItem.id}
+                >
+                  MODIFY
+                </button>
+                <button
+                  className={classes[13]}
+                  onClick={props.eventListeners[3]}
+                  value={todoItem.id}
+                ></button>
+              </div>
+              <p
+                className={classes[4](() => {
+                  if (todoItem.status) {
+                    classes[12];
+                  }
+                })}
                 value={todoItem.id}
               >
-                DELETE
-              </button>
-              <button
-                className={classes[6]}
-                onClick={props.eventListeners[2]}
-                value={todoItem.id}
-              >
-                MODIFY
-              </button>
-              <p className={classes[4]} value={todoItem.id}>
-                {todoItem.todo}
+                {todoItem.description}
               </p>
             </li>
           )))
