@@ -3,7 +3,6 @@ const app = express();
 const cors = require("cors");
 require("dotenv").config();
 const { PORT, BACKEND_URL } = process.env;
-const todosRoute = require("./routes/todosRoute");
 const fs = require("fs");
 const db_file = "./db/todos.json";
 
@@ -21,8 +20,6 @@ app.use(express.static("public"));
 app.get("/", (_req, res) => {
   res.send("<h1>Hello Express</h1>");
 });
-
-app.use("./todos", todosRoute);
 
 app.get("/todos", (req, res) => {
   loadData((todos) => {
