@@ -11,6 +11,7 @@ const { v4: uuidv4 } = require("uuid");
 function Todo(description) {
   this.id = uuidv4();
   this.description = description;
+  this.status = false;
 }
 
 app.use(express.json());
@@ -71,6 +72,7 @@ app.put("/todos/:id", (req, res) => {
   todosArr.splice(todoIndex, 1, {
     id: id,
     description: data.description,
+    status: data.status,
   });
   fs.writeFileSync(db_file, JSON.stringify(todosArr));
 
