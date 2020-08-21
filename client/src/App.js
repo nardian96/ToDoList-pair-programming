@@ -50,13 +50,24 @@ class App extends Component {
       .then(this.grabList);
   };
 
-  eventListeners = [this.postTodo, this.deleteTodo, this.modifyTodo];
+  checkedItem = (event) => {
+    event.preventDefault();
+    axios
+      .put(`${axiosURL}/status/?id=${event.target.value}`)
+      .then(this.grabList);
+  };
+  eventListeners = [
+    this.postTodo,
+    this.deleteTodo,
+    this.modifyTodo,
+    this.checkedItem,
+  ];
 
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <Todo list={this.testdata} eventListeners={this.eventListeners} />
+          <Todo list={this.state.todo} eventListeners={this.eventListeners} />
         </header>
       </div>
     );
