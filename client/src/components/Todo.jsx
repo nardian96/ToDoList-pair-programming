@@ -38,6 +38,9 @@ function Todo(props) {
           (console.log(props.list),
           props.list.map((todoItem) => (
             <li className={classes[3]} key={todoItem.id}>
+              <p className={classes[4]} value={todoItem.id}>
+                {todoItem.description}
+              </p>
               <button
                 className={classes[5]}
                 onClick={props.eventListeners[1]}
@@ -52,9 +55,6 @@ function Todo(props) {
               >
                 MODIFY
               </button>
-              <p className={classes[4]} value={todoItem.id}>
-                {todoItem.todo}
-              </p>
             </li>
           )))
         }
