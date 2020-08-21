@@ -15,6 +15,7 @@ function Todo(description) {
 }
 
 app.use(express.json());
+app.use(cors());
 
 app.use(express.static("public"));
 
@@ -43,7 +44,7 @@ app.delete("/todos/:id", (req, res) => {
   }
 });
 
-app.post("/todos/", (req, res) => {
+app.post("/todos", (req, res) => {
   console.log(req.body);
   let data = req.body;
 

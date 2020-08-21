@@ -1,10 +1,10 @@
-const fs = require('fs');
-const path = require('path');
-const { v4: uudiv4 } = require('uuid');
+const fs = require("fs");
+const path = require("path");
+const { v4: uuidv4 } = require("uuid");
 
-const todosFile = path.join(__dirname, '../db/todos.json');
+const todosFile = path.join(__dirname, "../db/todos.json");
 
-function Todo(id, name, description, date) {
+function Todo(name, description, date) {
   this.id = uuidv4();
   this.name = name;
   this.description = description;
