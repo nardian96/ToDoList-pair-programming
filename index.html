@@ -4,28 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    <div>
-        <ul>
-            <li>Pick up the dog
-                <button>Modify</button>
-                <button>Delete</button>
+    <div class="todo">
+        <h1 class="todo__title">TO-DO LIST</h1>
+        <form class="todo__form">
+            <label class="todo__form-label">What do you need to remember?</label>
+            <input class="todo__form-input" type="text" name="task">
+            <button class="todo__form-post-button">ADD</button>
+        </form>
+        <ul class="todo__list">
+            <li class="todo__list-item">
+                <button class="todo__modify-button"></button>
+                <button class="todo__delete-button"></button>
+                <p class="todo__item">Pick up the dog</p>
             </li>
-            <li>Pay phone bills
-                <button>Modify</button>
-                <button>Delete</button>
+            <li class="todo__list-item">
+                <button class="todo__modify-button"></button>
+                <button class="todo__delete-button"></button>
+                <p class="todo__item">Pay phone bills</p>
             </li>
-            <li>Get groceries
-                <button>Modify</button>
-                <button>Delete</button>
+            <li class="todo__list-item">
+                <button class="todo__modify-button"></button>
+                <button class="todo__delete-button"></button>
+                <p class="todo__item">Get groceries</p>
             </li>
         </ul>
-        <form>
-            <label>Insert Your Next Task:</label>
-            <input type="text" name="task">
-            <button>SUBMIT</button>
-        </form>
     </div>
+
 </body>
 </html>
