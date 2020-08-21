@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import "./Sass/app.css";
+import "./styles/styles.css";
 import Todo from "./components/Todo";
 
 const axiosURL = "http://localhost:5000/todos";
