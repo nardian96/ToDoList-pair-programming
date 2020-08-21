@@ -1,0 +1,144 @@
+@import './partials/variables';
+@import './partials/fonts';
+@import './partials/mixins';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 1440px;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+    // background-color: $background-color;
+    background-image: url(../assets/images/sarah-dorweiler-x2Tmfd1-SgA-unsplash.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.todo {
+    padding-top: 3rem;;
+    background-color: $form-color;
+    opacity: 80%;
+    // width: 50vw;
+    // height: 70vh;
+    width: 50rem;
+    height: 40rem;
+    margin: 8rem 8rem;
+    &__title {
+        font-family: 'Monts-Medium';
+        padding-bottom: 2rem;
+        margin: 0;
+        // background-color: $background-color;
+        color: $text-color;
+        text-align: center;
+        opacity: 100%;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__form-label {
+        font-family: 'Monts-Medium';
+        text-align: center;
+        margin: 1.5rem 0;
+        color: $text-color;
+    }
+
+    &__form-input {
+        margin: 0 2rem 1rem;
+        width: 20rem;
+        height: 2rem;
+        background-color: $form-color;
+        border: none;
+        border-bottom: 2px solid white;
+        color: $text-color;
+        font-family: 'Monts-Light';
+        outline: none;
+    }
+
+    &__form-post-button {
+        &:hover {
+            opacity: 70%;
+            background-color: white;
+            color: black;
+        }
+        background-color: #435CA3;
+        font-family: 'Monts-Bold';
+        border: none;
+        color: $text-color ;
+        padding: 1rem 0;
+        width: 10rem; 
+        margin-top: 1rem;
+    }
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        padding-left: 0;
+        width: 20rem;
+        height: 60%;
+        margin: 3rem auto 0;
+    }
+
+    &__list-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem;
+        border-bottom: 0.2px dotted rgba(255, 255, 255, 0.3);
+    }
+
+    &__button-container {
+        width: 6rem;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__modify-button {
+        border: none;
+        width: 2rem;
+        height: 100%;
+        background-color: $form-color;
+        background-image: url('../assets/icons/edit.svg');
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position-x: center;
+        background-position-y: center;
+        outline: none;
+    }
+
+    &__delete-button {
+        border: none;
+        width: 2rem;
+        height: 100%;
+        background-color: $form-color;
+        background-image: url('../assets/icons/trash.svg');
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position-x: center;
+        background-position-y: center;
+        outline: none;
+    }
+
+    &__item {
+        font-family: 'Monts-Light';
+        color: $text-color;
+        // padding-left: 2rem;
+    }
+}
+
