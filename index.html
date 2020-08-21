@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+
+    <div class="todo">
+        <h1 class="todo__title">TO-DO LIST</h1>
+        <form class="todo__form">
+            <label class="todo__form-label">What do you need to remember?</label>
+            <input class="todo__form-input" type="text" name="task">
+            <button class="todo__form-post-button">ADD NEW TASK</button>
+        </form>
+        <ul class="todo__list">
+            <li class="todo__list-item">
+                <input type="checkbox" class="todo__checkbox" name="to-do">
+                <label for="to-do" class="todo__item" >Pick up the dog</label>
+                <!-- <p class="todo__item">Pick up the dog</p> -->
+                <div class="todo__button-container">
+                    <button class="todo__modify-button"></button>
+                    <button class="todo__delete-button"></button>
+                </div>
+            </li>
+            <li class="todo__list-item">
+                <input type="checkbox" class="todo__checkbox" name="to-do">
+                <label for="to-do" class="todo__item" >Pay phone bills</label>
+                <!-- <p class="todo__item">Pay phone bills</p> -->
+                <div class="todo__button-container">
+                    <button class="todo__modify-button"></button>
+                    <button class="todo__delete-button"></button>
+                </div>
+            </li>
+            <li class="todo__list-item">
+                <input type="checkbox" class="todo__checkbox" name="to-do">
+                <label for="to-do" class="todo__item">Get groceries</label>
+                <!-- <p class="todo__item">Get groceries</p> -->
+                <div class="todo__button-container">
+                    <button class="todo__modify-button"></button>
+                    <button class="todo__delete-button"></button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
