@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
-const fs = require('fs');
+const cors = require('cors');
+require('dotenv').config();
+const { PORT, BACKEND_URL } = process.env;
+const todosRoute = require('./routes/todosRoute');
 
 app.use(express.json());
 
