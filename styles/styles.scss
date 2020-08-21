@@ -30,8 +30,6 @@ body {
     padding-top: 3rem;;
     background-color: $form-color;
     opacity: 80%;
-    // width: 50vw;
-    // height: 70vh;
     width: 50rem;
     height: 40rem;
     margin: 8rem 8rem;
@@ -66,6 +64,7 @@ body {
         border-bottom: 2px solid white;
         color: $text-color;
         font-family: 'Monts-Light';
+        font-size: 1rem;
         outline: none;
     }
 
@@ -74,6 +73,9 @@ body {
             opacity: 70%;
             background-color: white;
             color: black;
+        }
+        &:focus {
+            outline: none;
         }
         background-color: #435CA3;
         font-family: 'Monts-Bold';
@@ -96,6 +98,7 @@ body {
     }
 
     &__list-item {
+        position: relative;
         display: flex;
         justify-content: space-between;
         padding: 0.5rem;
@@ -138,7 +141,31 @@ body {
     &__item {
         font-family: 'Monts-Light';
         color: $text-color;
-        // padding-left: 2rem;
+        padding: 1rem 0
+    }
+
+    &__checkbox {
+        position: relative;
+        top: 1rem;
     }
 }
 
+//MOBILE DESIGN
+
+// @include mobile {
+//     body {
+//         background-image: url(../assets/images/sarah-dorweiler-x2Tmfd1-SgA-unsplash.jpg);
+//         background-size: contain;
+//     }
+
+//     .todo {
+//         width: 320px;
+//         padding-top: 3rem;;
+//         background-color: $form-color;
+//         opacity: 80%;
+//         width: 50rem;
+//         // height: 40rem;
+//         height: 150vh;
+//         padding: 3rem 2rem 0 2rem;
+//     }    
+// }
