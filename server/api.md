@@ -12,7 +12,6 @@ url: http://localhost:5000
 
 ```
 {
-  "title": "a title",
   "description": "a description"
 }
 ```
