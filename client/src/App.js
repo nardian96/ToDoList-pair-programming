@@ -56,7 +56,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Todo list={this.state.todo} eventListeners={this.eventListeners} />
+          <Todo list={this.testdata} eventListeners={this.eventListeners} />
         </header>
       </div>
     );
