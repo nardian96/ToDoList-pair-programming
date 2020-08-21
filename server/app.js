@@ -83,6 +83,26 @@ app.put("/todos/:id", (req, res) => {
   }
 });
 
+app.put("/todos/status/:id", (req, res) => {
+  const id = req.params.id;
+  let data = req.body;
+
+  const todosArr = list();
+  const todoIndex = todosArr.findIndex((todo) => todo.id === id);
+  todosArr.splice(todoIndex, 1, {
+    id: id,
+    description: todosArr[todoIndex].description,
+    status: data.status,
+  });
+  fs.writeFileSync(db_file, JSON.stringify(todosArr));
+
+  if (todoIndex !== -1) {
+    res.json(todosArr[todoIndex]);
+  } else {
+    res.status(404).json({ message: `todo with id ${id} not found` });
+  }
+});
+
 function loadData(callback) {
   fs.readFile(db_file, (err, data) => {
     if (err) throw err;
