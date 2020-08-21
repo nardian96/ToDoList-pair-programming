@@ -26,8 +26,10 @@ body {
 
 .todo {
     background-color: $form-color;
-    width: 50vw;
-    height: 60vh;
+    // width: 50vw;
+    // height: 70vh;
+    width: 50rem;
+    height: 40rem;
     margin: 8rem 8rem;
     &__title {
         font-family: 'Monts-Medium';
@@ -40,11 +42,41 @@ body {
     &__form {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     &__form-label {
         font-family: 'Monts-Medium';
+        text-align: center;
+        margin: 1.5rem 0;
         color: $text-color;
+    }
+
+    &__form-input {
+        margin: 0 2rem 1rem;
+        width: 20rem;
+        height: 2rem;
+        background-color: $form-color;
+        border: none;
+        border-bottom: 1px solid white;
+        color: $text-color;
+        font-family: 'Monts-Light';
+        outline: none;
+    }
+
+    &__form-post-button {
+        &:hover {
+            opacity: 70%;
+            background-color: white;
+            color: black;
+        }
+        background-color: #435CA3;
+        font-family: 'Monts-Bold';
+        border: none;
+        color: $text-color ;
+        padding: 1rem 0;
+        width: 10rem; 
+        margin-top: 1rem;
     }
 
     &__list {
@@ -53,6 +85,9 @@ body {
         flex-direction: column;
         align-items: center;
         padding-left: 0;
+        height: 60%;
+        margin-right: 6rem;
+        margin-top: 3rem;
     }
 
     &__list-item {
@@ -69,6 +104,7 @@ body {
         background-size: 50%;
         background-position-x: center;
         background-position-y: center;
+        outline: none;
     }
 
     &__delete-button {
@@ -80,11 +116,13 @@ body {
         background-size: 50%;
         background-position-x: center;
         background-position-y: center;
+        outline: none;
     }
 
     &__item {
         font-family: 'Monts-Light';
         color: $text-color;
+        padding-left: 2rem;
     }
 }
 

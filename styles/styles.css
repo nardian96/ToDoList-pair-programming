@@ -35,7 +35,7 @@ body {
 }
 
 body {
-  background-color: #282136;
+  background-color: #9D7E85;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,9 +48,9 @@ body {
 }
 
 .todo {
-  background-color: #FE2852;
-  width: 50vw;
-  height: 60vh;
+  background-color: #282136;
+  width: 50rem;
+  height: 40rem;
   margin: 8rem 8rem;
 }
 
@@ -58,7 +58,7 @@ body {
   font-family: 'Monts-Medium';
   padding-bottom: 2rem;
   margin: 0;
-  background-color: #282136;
+  background-color: #9D7E85;
   color: #F9F3F5;
   text-align: center;
 }
@@ -71,11 +71,44 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .todo__form-label {
   font-family: 'Monts-Medium';
+  text-align: center;
+  margin: 1.5rem 0;
   color: #F9F3F5;
+}
+
+.todo__form-input {
+  margin: 0 2rem 1rem;
+  width: 20rem;
+  height: 2rem;
+  background-color: #282136;
+  border: none;
+  border-bottom: 1px solid white;
+  color: #F9F3F5;
+  font-family: 'Monts-Light';
+  outline: none;
+}
+
+.todo__form-post-button {
+  background-color: #435CA3;
+  font-family: 'Monts-Bold';
+  border: none;
+  color: #F9F3F5;
+  padding: 1rem 0;
+  width: 10rem;
+  margin-top: 1rem;
+}
+
+.todo__form-post-button:hover {
+  opacity: 70%;
+  background-color: white;
+  color: black;
 }
 
 .todo__list {
@@ -91,6 +124,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding-left: 0;
+  height: 60%;
+  margin-right: 6rem;
+  margin-top: 3rem;
 }
 
 .todo__list-item {
@@ -105,27 +141,30 @@ body {
 .todo__modify-button {
   border: none;
   width: 2rem;
-  background-color: #FE2852;
+  background-color: #282136;
   background-image: url("../assets/icons/edit.svg");
   background-repeat: no-repeat;
   background-size: 50%;
   background-position-x: center;
   background-position-y: center;
+  outline: none;
 }
 
 .todo__delete-button {
   border: none;
   width: 2rem;
-  background-color: #FE2852;
+  background-color: #282136;
   background-image: url("../assets/icons/trash.svg");
   background-repeat: no-repeat;
   background-size: 50%;
   background-position-x: center;
   background-position-y: center;
+  outline: none;
 }
 
 .todo__item {
   font-family: 'Monts-Light';
   color: #F9F3F5;
+  padding-left: 2rem;
 }
 /*# sourceMappingURL=styles.css.map */
