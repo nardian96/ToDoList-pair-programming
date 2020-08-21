@@ -86,14 +86,13 @@ app.put("/todos/:id", (req, res) => {
 
 app.put("/todos/status/:id", (req, res) => {
   const id = req.params.id;
-  let data = req.body;
 
   const todosArr = list();
   const todoIndex = todosArr.findIndex((todo) => todo.id === id);
   todosArr.splice(todoIndex, 1, {
     id: id,
     description: todosArr[todoIndex].description,
-    status: data.status,
+    status: !todosArr[todoIndex].status,
   });
   fs.writeFileSync(db_file, JSON.stringify(todosArr));
 

@@ -1,1 +1,8 @@
-[{"id":"1ainjruutd1j","description":"bring homework"},{"id":"51bbb878-b1ed-40f4-9ca8-ef7dc95c2f03","description":"bring homework","status":false}]
+[
+  { "id": "1ainjruutd1j", "description": "bring homework", "status": false },
+  {
+    "id": "51bbb878-b1ed-40f4-9ca8-ef7dc95c2f03",
+    "description": "bring homework",
+    "status": true
+  }
+]
