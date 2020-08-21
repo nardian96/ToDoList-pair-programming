@@ -59,11 +59,13 @@ function Todo(props) {
                 ></button>
               </div>
               <p
-                className={classes[4](() => {
-                  if (todoItem.status) {
-                    classes[12];
-                  }
-                })}
+                className={classes[4]
+                //   (() => {
+                //   if (todoItem.status) {
+                //     classes[12];
+                //   }
+                // })
+              }
                 value={todoItem.id}
               >
                 {todoItem.description}
