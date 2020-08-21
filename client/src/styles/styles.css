@@ -127,7 +127,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-left: 0;
+  padding: 0 3rem 3rem 5rem;
   padding-bottom: 3rem;
   min-width: 20rem;
   height: 60%;
